@@ -18,14 +18,6 @@ export default function OnBoarding() {
     });
   });
 
-  const handleLogin = () => {
-    Alert.alert("Login Button Pressed Successfully!");
-  };
-
-  const handleRegistration = () => {
-    Alert.alert("Registration Button Pressed Successfully!");
-  };
-
   const copy = new Date();
   let year = copy.getFullYear();
   return (
@@ -50,7 +42,7 @@ export default function OnBoarding() {
           />
         </View>
         <View style={styles.footerContainer}>
-          <Text style={styles.footerText}>© {year}</Text>
+          <Text style={styles.footerText}>©{year}</Text>
         </View>
       </View>
     </SafeAreaView>
