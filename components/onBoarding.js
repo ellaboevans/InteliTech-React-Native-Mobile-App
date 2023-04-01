@@ -1,5 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
+import * as Animatable from "react-native-animatable";
 import {
   StyleSheet,
   Text,
@@ -23,26 +24,40 @@ export default function OnBoarding() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text style={styles.textLogo}>InteliTech</Text>
+        <Animatable.Text
+          animation="fadeIn"
+          easing="ease-in-out"
+          style={styles.textLogo}
+        >
+          InteliTech
+        </Animatable.Text>
         <Text style={styles.slogan}>Let's do this together</Text>
       </View>
       <View style={styles.splashBtn}>
-        <View style={styles.loginBtn}>
+        <Animatable.View
+          animation="zoomIn"
+          easing="ease-in"
+          style={styles.loginBtn}
+        >
           <Button
             title="Login"
             color="white"
             onPress={() => navigation.navigate("login")}
           />
-        </View>
-        <View style={styles.registerBtn}>
+        </Animatable.View>
+        <Animatable.View
+          animation="zoomIn"
+          easing="ease-in-out"
+          style={styles.registerBtn}
+        >
           <Button
             title="Register"
             color="white"
             onPress={() => navigation.navigate("register")}
           />
-        </View>
+        </Animatable.View>
         <View style={styles.footerContainer}>
-          <Text style={styles.footerText}>©{year}</Text>
+          <Text style={styles.footerText}>Powered by Concept ©{year}</Text>
         </View>
       </View>
     </SafeAreaView>
