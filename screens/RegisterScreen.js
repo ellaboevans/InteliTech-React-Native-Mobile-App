@@ -4,7 +4,6 @@ import { useNavigation } from "@react-navigation/native";
 import { auth } from "../firebase";
 
 const RegisterScreen = () => {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -25,7 +24,7 @@ const RegisterScreen = () => {
       alert("Password does not match!");
     } else {
       auth
-        .createUserWithEmailAndPassword(email, password, name)
+        .createUserWithEmailAndPassword(email, password)
         .then((userCredentials) => {
           const user = userCredentials.user;
           console.log("Registered with:", user.email);
@@ -48,13 +47,6 @@ const RegisterScreen = () => {
           Kindly register an account with us!
         </Text>
         <View>
-          <TextInput
-            placeholder="Enter your name"
-            keyboardType="default"
-            value={name}
-            onChangeText={(text) => setName(text)}
-            className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
-          />
           <TextInput
             placeholder="Enter your email"
             keyboardType="default"
