@@ -13,9 +13,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator style={styles.container}>
         <Stack.Screen name="onboarding" component={OnBoarding} />
+        <Stack.Screen name="home" component={HomeScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="register" component={RegisterScreen} />
-        <Stack.Screen name="home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

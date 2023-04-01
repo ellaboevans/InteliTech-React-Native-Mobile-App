@@ -1,9 +1,38 @@
 import { View, Text, SafeAreaView, TextInput, Button } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { auth } from "../firebase";
 
 const RegisterScreen = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   const navigation = useNavigation();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigation.navigate("home");
+      }
+    });
+    return unsubscribe;
+  }, []);
+
+  const handleSignUp = () => {
+    if (password != confirmPassword) {
+      alert("Password does not match!");
+    } else {
+      auth
+        .createUserWithEmailAndPassword(email, password, name)
+        .then((userCredentials) => {
+          const user = userCredentials.user;
+          console.log("Registered with:", user.email);
+        })
+        .catch((error) => alert(error.message));
+    }
+  };
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -20,28 +49,37 @@ const RegisterScreen = () => {
         </Text>
         <View>
           <TextInput
-            placeholder="Enter your email"
-            keyboardType="email-address"
+            placeholder="Enter your name"
+            keyboardType="default"
+            value={name}
+            onChangeText={(text) => setName(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
-
+          <TextInput
+            placeholder="Enter your email"
+            keyboardType="default"
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+            className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
+          />
           <TextInput
             placeholder="Enter your password"
-            keyboardType="numbers-and-punctuation"
+            keyboardType="default"
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            secureTextEntry
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
-
           <TextInput
             placeholder="Confirm your password"
-            keyboardType="numbers-and-punctuation"
+            keyboardType="default"
+            value={confirmPassword}
+            onChangeText={(text) => setConfirmPassword(text)}
+            secureTextEntry
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
           <View className="bg-[#1D2330] py-2 mt-8 rounded-md">
-            <Button
-              title="Register"
-              color="white"
-              onPress={() => navigation.goBack("login")}
-            />
+            <Button title="Register" color="white" onPress={handleSignUp} />
           </View>
           <View className="flex-row items-center justify-evenly mt-4">
             <View className="w-36 h-[1px] bg-[#9EA1AC] "></View>
