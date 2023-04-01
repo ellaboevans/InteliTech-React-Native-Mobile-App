@@ -10,6 +10,7 @@ const HomeScreen = () => {
     auth
       .signOut()
       .then(() => {
+        console.log("Signed out successful");
         navigation.replace("login");
       })
       .catch((error) => alert(error.message));
