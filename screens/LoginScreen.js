@@ -88,7 +88,7 @@ const LoginScreen = () => {
             <View className="w-36 h-[1px] bg-[#9EA1AC] "></View>
           </View>
           <TouchableOpacity
-            className="bg-[#1877F2] py-4 mt-8 rounded-md"
+            className="bg-[#1877F2] py-4 mt-4 rounded-md"
             onPress={() => alert("We're yet to integrate this feature!")}
           >
             <Text className="text-white text-center font-semibold text-[18px] ">
