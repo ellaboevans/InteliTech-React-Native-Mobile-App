@@ -1,4 +1,12 @@
-import { View, Text, SafeAreaView, TextInput, Button } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TextInput,
+  Button,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+} from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { auth } from "../firebase";
@@ -41,7 +49,7 @@ const RegisterScreen = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-      <View className="px-4">
+      <KeyboardAvoidingView className="px-4 mt-8">
         <Text className="text-[28px] font-bold mt-12 ">Sign Up</Text>
         <Text className=" text-[#bebebe] mb-2 mt-2">
           Kindly register an account with us!
@@ -70,18 +78,28 @@ const RegisterScreen = () => {
             secureTextEntry
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
-          <View className="bg-[#1D2330] py-2 mt-8 rounded-md">
-            <Button title="Register" color="white" onPress={handleSignUp} />
-          </View>
+          <TouchableOpacity
+            className="bg-[#1D2330] py-4 mt-8 rounded-md"
+            onPress={handleSignUp}
+          >
+            <Text className="text-white text-center font-semibold text-[18px] uppercase">
+              Sign Up
+            </Text>
+          </TouchableOpacity>
           <View className="flex-row items-center justify-evenly mt-4">
             <View className="w-36 h-[1px] bg-[#9EA1AC] "></View>
             <Text className="text-[16px] text-[#9EA1AC]">or</Text>
             <View className="w-36 h-[1px] bg-[#9EA1AC] "></View>
           </View>
-          <View className="bg-[#1f57d1] py-2 mt-2 rounded-md">
-            <Button title="Sign Up with Facebook" color="white" />
-          </View>
-          <View className="mt-20 flex-row items-center justify-center space-x-2">
+          <TouchableOpacity
+            className="bg-[#1877F2] py-4 mt-4 rounded-md"
+            onPress={() => alert("We're yet to integrate this feature!")}
+          >
+            <Text className="text-white text-center font-semibold text-[18px] uppercase">
+              Sign Up in with Facebook
+            </Text>
+          </TouchableOpacity>
+          <View className="mt-8 flex-row items-center justify-center space-x-2">
             <Text className="text-center   text-[#1D2330] text-[16px]">
               Already have an account?
             </Text>
@@ -93,7 +111,7 @@ const RegisterScreen = () => {
             </Text>
           </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
