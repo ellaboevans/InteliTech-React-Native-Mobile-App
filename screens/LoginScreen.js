@@ -5,6 +5,7 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -43,14 +44,15 @@ const LoginScreen = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-      <View className="px-4">
-        <Text className="text-[28px] font-bold mt-12 ">Sign In</Text>
+      <KeyboardAvoidingView className="px-4 mt-8">
+        <Text className="text-[28px] font-bold mt-12 ">Welcome Back!</Text>
         <Text className="text-xm text-[#bebebe] mb-2 mt-2">
           Please Sign In into your account!
         </Text>
         <View>
           <TextInput
             placeholder="Enter your email"
+            placeholderTextColor={"#bebebe"}
             keyboardType="email-address"
             value={email}
             onChangeText={(text) => setEmail(text)}
@@ -59,6 +61,7 @@ const LoginScreen = () => {
 
           <TextInput
             placeholder="Enter your password"
+            placeholderTextColor={"#bebebe"}
             keyboardType="numbers-and-punctuation"
             secureTextEntry
             value={password}
@@ -66,7 +69,7 @@ const LoginScreen = () => {
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
           <TouchableOpacity>
-            <Text className="text-[16px] font-bold text-[#1D2330] text-right mb-1 mt-3">
+            <Text className="text-[16px] font-bold text-[#303030] text-right mb-1 mt-3">
               Forgot password?
             </Text>
           </TouchableOpacity>
@@ -94,7 +97,7 @@ const LoginScreen = () => {
             </Text>
           </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
