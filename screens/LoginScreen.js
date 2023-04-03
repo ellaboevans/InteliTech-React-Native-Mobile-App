@@ -74,17 +74,27 @@ const LoginScreen = () => {
             </Text>
           </TouchableOpacity>
 
-          <View className="bg-[#1D2330] py-2 mt-8 rounded-md">
-            <Button title="Log In" color="white" onPress={handleLogin} />
-          </View>
+          <TouchableOpacity
+            className="bg-[#1D2330] py-4 mt-8 rounded-md"
+            onPress={handleLogin}
+          >
+            <Text className="text-white text-center font-semibold text-[18px] ">
+              Log In
+            </Text>
+          </TouchableOpacity>
           <View className="flex-row items-center justify-evenly mt-4">
             <View className="w-36 h-[1px] bg-[#9EA1AC] "></View>
             <Text className="text-[16px] text-[#9EA1AC]">or</Text>
             <View className="w-36 h-[1px] bg-[#9EA1AC] "></View>
           </View>
-          <View className="bg-[#1f57d1] py-2 mt-2 rounded-md">
-            <Button title="Log In with Facebook" color="white" />
-          </View>
+          <TouchableOpacity
+            className="bg-[#1877F2] py-4 mt-8 rounded-md"
+            onPress={() => alert("We're yet to integrate this feature!")}
+          >
+            <Text className="text-white text-center font-semibold text-[18px] ">
+              Sign in with Facebook
+            </Text>
+          </TouchableOpacity>
           <View className="mt-20 flex-row items-center justify-center space-x-2">
             <Text className="text-center   text-[#1D2330] text-[16px]">
               Need an account?
