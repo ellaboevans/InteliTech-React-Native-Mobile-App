@@ -78,7 +78,7 @@ const LoginScreen = () => {
             className="bg-[#1D2330] py-4 mt-8 rounded-md"
             onPress={handleLogin}
           >
-            <Text className="text-white text-center font-semibold text-[18px] ">
+            <Text className="text-white text-center font-semibold text-[18px] uppercase ">
               Log In
             </Text>
           </TouchableOpacity>
@@ -91,7 +91,7 @@ const LoginScreen = () => {
             className="bg-[#1877F2] py-4 mt-4 rounded-md"
             onPress={() => alert("We're yet to integrate this feature!")}
           >
-            <Text className="text-white text-center font-semibold text-[18px] ">
+            <Text className="text-white text-center font-semibold text-[18px] uppercase ">
               Sign in with Facebook
             </Text>
           </TouchableOpacity>
