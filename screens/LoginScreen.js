@@ -95,7 +95,7 @@ const LoginScreen = () => {
               Sign in with Facebook
             </Text>
           </TouchableOpacity>
-          <View className="mt-20 flex-row items-center justify-center space-x-2">
+          <View className="mt-8 flex-row items-center justify-center space-x-2">
             <Text className="text-center   text-[#1D2330] text-[16px]">
               Need an account?
             </Text>
