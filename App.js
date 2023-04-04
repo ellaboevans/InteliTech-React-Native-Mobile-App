@@ -1,9 +1,8 @@
-import { StyleSheet, SafeAreaView, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
-import OnBoarding from "./components/onBoarding";
+import OnBoardingScreen from "./screens/OnBoardingScreen";
 import HomeScreen from "./screens/HomeScreen";
 
 const Stack = createNativeStackNavigator();
@@ -11,8 +10,8 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator style={styles.container}>
-        <Stack.Screen name="onboarding" component={OnBoarding} />
+      <Stack.Navigator>
+        <Stack.Screen name="onboarding" component={OnBoardingScreen} />
         <Stack.Screen name="home" component={HomeScreen} />
         <Stack.Screen name="login" component={LoginScreen} />
         <Stack.Screen name="register" component={RegisterScreen} />
@@ -20,15 +19,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: "#424242",
-  },
-  content: {
-    padding: 40,
-  },
-  list: {
-    marginTop: 20,
-  },
-});
