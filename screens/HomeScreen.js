@@ -21,7 +21,7 @@ const HomeScreen = () => {
   const [searchText, setSearchText] = useState("");
   const navigation = useNavigation();
 
-  console.log(searchText);
+  // console.log(searchText);
 
   const handleSignOut = () => {
     auth
