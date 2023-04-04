@@ -50,7 +50,9 @@ const RegisterScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <KeyboardAvoidingView className="px-4 mt-8">
-        <Text className="text-[28px] font-bold mt-12 ">Sign Up</Text>
+        <Text className="text-[28px] font-bold text-[#1D2330] mt-12 ">
+          Get an account!
+        </Text>
         <Text className=" text-[#bebebe] mb-2 mt-2">
           Kindly register an account with us!
         </Text>
