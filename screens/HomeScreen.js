@@ -2,7 +2,6 @@ import {
   View,
   Text,
   SafeAreaView,
-  Button,
   ScrollView,
   TouchableOpacity,
   TextInput,
