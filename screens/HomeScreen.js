@@ -18,6 +18,20 @@ import ItemCategory from "../components/ItemCategory";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState("");
+  const [category, setCategories] = useState([
+    {
+      id: 1,
+      title: "Popular",
+    },
+    {
+      id: 2,
+      title: "Suggestions",
+    },
+    {
+      id: 3,
+      title: "Discounts",
+    },
+  ]);
   const navigation = useNavigation();
 
   console.log(searchText);
@@ -90,8 +104,9 @@ const HomeScreen = () => {
       <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
         <View>
           {/* Popular Components */}
-          <ItemCategory title="Popular" />
-          <ItemCategory title="Suggestions" />
+          {category.map((category) => (
+            <ItemCategory key={category.id} title={category.title} />
+          ))}
         </View>
       </ScrollView>
     </SafeAreaView>
