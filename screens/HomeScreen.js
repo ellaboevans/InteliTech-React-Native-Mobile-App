@@ -52,15 +52,15 @@ const HomeScreen = () => {
   }
 
   return (
-    <SafeAreaView className="bg-white flex-1">
-      <ScrollView className="px-4 mt-8">
+    <SafeAreaView className="bg-white flex-1 ">
+      <View className="px-4 mt-8">
         <View className="flex-row  items-center justify-between">
           <View>
             <Text className="text-lg text-[22px] text-[#8b8b8b]">
               Let's find your
             </Text>
             <Text className="font-bold text-3xl text-[#1D2330]">
-              place for work
+              favourite dish
             </Text>
           </View>
           <TouchableOpacity
@@ -86,6 +86,8 @@ const HomeScreen = () => {
             <AdjustmentsVerticalIcon color="white" size={30} opacity={1} />
           </TouchableOpacity>
         </View>
+      </View>
+      <ScrollView className="px-4 mt-8" showsVerticalScrollIndicator={false}>
         <View>
           {/* Popular Components */}
           <ItemCategroy title="Popular" />
