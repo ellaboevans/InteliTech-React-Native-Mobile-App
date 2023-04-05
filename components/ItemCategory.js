@@ -11,7 +11,7 @@ const ItemCategroy = ({ title }) => {
       image:
         "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=600",
       rating: 4.1,
-      address: "Ayenduase, KNUST",
+      address: "Ayeduase, KNUST",
       price: 250.55,
       stock: false,
     },
