@@ -77,7 +77,7 @@ const HomeScreen = () => {
               placeholder="Search for a place..."
               placeholderTextColor={"#bebebe"}
               keyboardType="default"
-              value={searchText}
+              value={searchText.trim()}
               onChangeText={(text) => setSearchText(text)}
               className="w-60"
             />

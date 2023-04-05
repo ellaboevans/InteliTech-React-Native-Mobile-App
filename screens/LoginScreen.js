@@ -54,7 +54,7 @@ const LoginScreen = () => {
             placeholder="Enter your email"
             placeholderTextColor={"#bebebe"}
             keyboardType="email-address"
-            value={email}
+            value={email.trim()}
             onChangeText={(text) => setEmail(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
@@ -64,7 +64,7 @@ const LoginScreen = () => {
             placeholderTextColor={"#bebebe"}
             keyboardType="numbers-and-punctuation"
             secureTextEntry
-            value={password}
+            value={password.trim()}
             onChangeText={(text) => setPassword(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />

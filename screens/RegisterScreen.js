@@ -67,7 +67,7 @@ const RegisterScreen = () => {
           <TextInput
             placeholder="Enter your password"
             keyboardType="default"
-            value={password}
+            value={password.trim()}
             onChangeText={(text) => setPassword(text)}
             secureTextEntry
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
@@ -75,7 +75,7 @@ const RegisterScreen = () => {
           <TextInput
             placeholder="Confirm your password"
             keyboardType="default"
-            value={confirmPassword}
+            value={confirmPassword.trim()}
             onChangeText={(text) => setConfirmPassword(text)}
             secureTextEntry
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
