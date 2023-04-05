@@ -81,13 +81,6 @@ const ItemCategroy = ({ title }) => {
               stock={item.stock}
             />
           ))}
-          {/* <PopularCards
-            image="https://cdn.pixabay.com/photo/2023/03/29/10/00/cherry-blossom-7885057__340.jpg"
-            title="Coworking Space"
-            rating={4.9}
-            address="Newburry Street, Boston"
-            price={250.89}
-          /> */}
         </View>
       </ScrollView>
     </>
