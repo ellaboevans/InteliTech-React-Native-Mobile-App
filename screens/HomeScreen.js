@@ -88,7 +88,7 @@ const HomeScreen = () => {
           <View className=" flex-1  flex-row items-center  bg-[#f2f2f2] py-3 pl-3 rounded-md">
             <MagnifyingGlassIcon color="gray" size={25} opacity={0.5} />
             <TextInput
-              placeholder="Search for a place..."
+              placeholder="Search for a place.."
               placeholderTextColor={"#bebebe"}
               keyboardType="default"
               value={searchText.trim()}
@@ -103,7 +103,7 @@ const HomeScreen = () => {
       </View>
       <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
         <View>
-          {/* Popular Components */}
+          {/* Categories Components */}
           {categories.map((category) => (
             <ItemCategory key={category.id} title={category.title} />
           ))}
