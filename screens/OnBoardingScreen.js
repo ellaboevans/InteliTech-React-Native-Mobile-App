@@ -1,16 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
-import { useLayoutEffect } from "react";
 import * as Animatable from "react-native-animatable";
 import { Text, SafeAreaView, View, TouchableOpacity } from "react-native";
 
 export default function OnBoardingScreen() {
   const navigation = useNavigation();
-
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  });
 
   // Get current year
   const copy = new Date();

@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   KeyboardAvoidingView,
 } from "react-native";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { auth } from "../firebase";
 
@@ -35,12 +35,6 @@ const LoginScreen = () => {
       })
       .catch((error) => alert(error.message));
   };
-
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  });
 
   return (
     <SafeAreaView className="flex-1 bg-white">
