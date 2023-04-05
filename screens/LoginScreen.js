@@ -68,7 +68,9 @@ const LoginScreen = () => {
             onChangeText={(text) => setPassword(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("forgotpassword")}
+          >
             <Text className="text-[16px] font-bold text-[#303030] text-right mb-1 mt-3">
               Forgot password?
             </Text>
