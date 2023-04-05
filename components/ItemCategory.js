@@ -1,8 +1,36 @@
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PopularCards from "./PopularCards";
+import Axios from "axios";
 
 const ItemCategroy = ({ title }) => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      url: "https://jsearch.p.rapidapi.com/search",
+      params: {
+        query: "Python developer in Texas, USA",
+        page: "1",
+        num_pages: "1",
+      },
+      headers: {
+        "X-RapidAPI-Key": "065acb88a4mshe9fab85054aff6fp12ec48jsn47201de46c36",
+        "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+      },
+    };
+
+    Axios.request(options)
+      .then(function (response) {
+        console.log(response.data);
+        setData(response.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <>
       <View className="flex-row items-center mt-8">
