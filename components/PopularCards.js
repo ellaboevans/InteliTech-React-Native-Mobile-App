@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { StarIcon, MapPinIcon } from "react-native-heroicons/solid";
 
-const PopularCards = ({ title, image, rating, address, price }) => {
+const PopularCards = ({ title, image, rating, address, price, stock }) => {
   return (
     <TouchableOpacity>
       <View className="mx-2 ">
@@ -38,10 +38,23 @@ const PopularCards = ({ title, image, rating, address, price }) => {
                   {address ? `${address}` : "There's no address"}
                 </Text>
               </View>
-              <Text className="font-bold text-xl text-[#1D2330] my-2 ">
-                ${price ? `${price}` : "0.00"}
-                <Text className="font-normal text-gray-400">/day</Text>
-              </Text>
+              <View className="flex-row items-center my-2 justify-between ">
+                <Text className="font-bold text-xl text-[#1D2330]  ">
+                  ${price ? `${price}` : "0.00"}
+                  <Text className="font-normal text-gray-400">/day</Text>
+                </Text>
+                <TouchableOpacity className="bg-[#1D2330] p-1 px-2 rounded-md">
+                  {stock ? (
+                    <Text className="font-semibold text-xs text-white ">
+                      In Stock
+                    </Text>
+                  ) : (
+                    <Text className="font-semibold text-xs text-white ">
+                      Out of Stock
+                    </Text>
+                  )}
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
