@@ -62,7 +62,7 @@ const ItemCategroy = ({ title }) => {
     <>
       <View className="flex-row items-center mt-8">
         <Text className="font-bold text-[#1D2330] text-[18px] flex-1">
-          {title ? title : "Not set"}
+          {title ? `${title}` : "Not set"}
         </Text>
         <TouchableOpacity>
           <Text className="text-[15px] text-gray-400">View all</Text>
