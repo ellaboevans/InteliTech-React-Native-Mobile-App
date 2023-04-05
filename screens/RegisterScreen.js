@@ -54,7 +54,7 @@ const RegisterScreen = () => {
           <TextInput
             placeholder="Enter your email"
             keyboardType="default"
-            value={email}
+            value={email.trim()}
             onChangeText={(text) => setEmail(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
           />
