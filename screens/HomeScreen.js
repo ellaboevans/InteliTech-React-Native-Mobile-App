@@ -20,7 +20,7 @@ const HomeScreen = () => {
   const [searchText, setSearchText] = useState("");
   const navigation = useNavigation();
 
-  // console.log(searchText);
+  console.log(searchText);
 
   const handleSignOut = () => {
     auth
@@ -70,7 +70,7 @@ const HomeScreen = () => {
             <ArrowLeftOnRectangleIcon color="black" opacity={0.6} size={28} />
           </TouchableOpacity>
         </View>
-        <View className="flex-row items-center mt-4 space-x-2">
+        <View className="flex-row items-center mt-4 mb-2 space-x-2">
           <View className=" flex-1  flex-row items-center  bg-[#f2f2f2] py-3 pl-3 rounded-md">
             <MagnifyingGlassIcon color="gray" size={25} opacity={0.5} />
             <TextInput
@@ -87,7 +87,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
       </View>
-      <ScrollView className="px-4 mt-8" showsVerticalScrollIndicator={false}>
+      <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
         <View>
           {/* Popular Components */}
           <ItemCategroy title="Popular" />
