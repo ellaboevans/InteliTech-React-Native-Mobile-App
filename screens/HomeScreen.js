@@ -18,7 +18,7 @@ import ItemCategory from "../components/ItemCategory";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState("");
-  const [category, setCategories] = useState([
+  const [categories, setCategories] = useState([
     {
       id: 1,
       title: "Popular",
@@ -104,7 +104,7 @@ const HomeScreen = () => {
       <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
         <View>
           {/* Popular Components */}
-          {category.map((category) => (
+          {categories.map((category) => (
             <ItemCategory key={category.id} title={category.title} />
           ))}
         </View>
