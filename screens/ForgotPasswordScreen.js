@@ -32,9 +32,10 @@ const ForgotPasswordScreen = () => {
     <SafeAreaView className="flex-1 bg-white">
       <KeyboardAvoidingView className="px-4 mt-14">
         <Text className="text-[28px] font-bold mt-12 ">Forgot Password?</Text>
-        <Text className="text-xm text-[#bebebe] mb-2 mt-2">
-          Please enter your email to reset!
+        <Text className="text-sm text-[#bebebe] mb-2 mt-2">
+          Kindly check your email inbox to complete the process.
         </Text>
+        <Text className="text-sm text-[#bebebe]">Thank you!</Text>
         <View>
           <TextInput
             placeholder="Enter your email for verification"
