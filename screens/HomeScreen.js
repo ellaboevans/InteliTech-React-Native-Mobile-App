@@ -14,7 +14,7 @@ import {
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
 import { auth } from "../firebase";
-import ItemCategroy from "../components/ItemCategory";
+import ItemCategory from "../components/ItemCategory";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState("");
@@ -57,10 +57,10 @@ const HomeScreen = () => {
         <View className="flex-row  items-center justify-between">
           <View>
             <Text className="text-lg text-[22px] text-[#8b8b8b]">
-              Let's find your
+              Let's find you a
             </Text>
             <Text className="font-bold text-3xl text-[#1D2330]">
-              favourite dish
+              place to sleep
             </Text>
           </View>
           <TouchableOpacity
@@ -90,8 +90,8 @@ const HomeScreen = () => {
       <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
         <View>
           {/* Popular Components */}
-          <ItemCategroy title="Popular" />
-          <ItemCategroy title="Suggestions" />
+          <ItemCategory title="Popular" />
+          <ItemCategory title="Suggestions" />
         </View>
       </ScrollView>
     </SafeAreaView>

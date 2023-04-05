@@ -7,9 +7,9 @@ const ItemCategroy = ({ title }) => {
   const [data, setData] = useState([
     {
       id: 1,
-      title: "Ghanaian Dish",
+      title: "Canam Hall",
       image:
-        "https://images.pexels.com/photos/15640312/pexels-photo-15640312.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=600",
       rating: 4.1,
       address: "Accra, Ghana",
       price: 250.55,
@@ -17,9 +17,9 @@ const ItemCategroy = ({ title }) => {
     },
     {
       id: 2,
-      title: "Organic Fruits",
+      title: "Victory Towers Annex",
       image:
-        "https://images.pexels.com/photos/13451707/pexels-photo-13451707.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=600",
       rating: 4.9,
       address: "Cape Coast, Ghana",
       price: 180.98,
@@ -27,9 +27,9 @@ const ItemCategroy = ({ title }) => {
     },
     {
       id: 3,
-      title: "Cooking Ingredients",
+      title: "Evandy Annex Hotel",
       image:
-        "https://images.pexels.com/photos/15792418/pexels-photo-15792418.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "https://images.pexels.com/photos/53464/sheraton-palace-hotel-lobby-architecture-san-francisco-53464.jpeg?auto=compress&cs=tinysrgb&w=600",
       rating: 3.9,
       address: "Winneba, Ghana",
       price: 250.55,
@@ -37,9 +37,9 @@ const ItemCategroy = ({ title }) => {
     },
     {
       id: 4,
-      title: "Dinner Dish",
+      title: "St. Theresah's Hotel",
       image:
-        "https://images.pexels.com/photos/13669533/pexels-photo-13669533.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=600",
       rating: 3.2,
       address: "Tamale, Ghana",
       price: 180.98,
@@ -47,9 +47,9 @@ const ItemCategroy = ({ title }) => {
     },
     {
       id: 5,
-      title: "Just Fruit",
+      title: "Wantapa Hotel",
       image:
-        "https://images.pexels.com/photos/15792418/pexels-photo-15792418.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=600",
       rating: 3.3,
       address: "Koforidua, Ghana",
       price: 100.51,

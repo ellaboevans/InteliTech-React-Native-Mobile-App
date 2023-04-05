@@ -46,11 +46,11 @@ const PopularCards = ({ title, image, rating, address, price, stock }) => {
                 <TouchableOpacity className="bg-[#1D2330] p-1 px-2 rounded-md">
                   {stock ? (
                     <Text className="font-semibold text-xs text-white ">
-                      In Stock
+                      Vacant Space
                     </Text>
                   ) : (
                     <Text className="font-semibold text-xs text-white ">
-                      Out of Stock
+                      No Space
                     </Text>
                   )}
                 </TouchableOpacity>
