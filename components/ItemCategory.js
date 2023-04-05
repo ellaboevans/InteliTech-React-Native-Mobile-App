@@ -45,6 +45,16 @@ const ItemCategroy = ({ title }) => {
       price: 180.98,
       stock: true,
     },
+    {
+      id: 5,
+      title: "Just Fruit",
+      image:
+        "https://images.pexels.com/photos/15792418/pexels-photo-15792418.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      rating: 3.2,
+      address: "Koforidua, Ghana",
+      price: 180.52,
+      stock: false,
+    },
   ]);
 
   useEffect(() => {});
