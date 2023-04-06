@@ -77,9 +77,9 @@ const HomeScreen = () => {
               className="w-60"
             />
           </View>
-          <TouchableOpacity className="bg-[#1D2330] w-11  py-2 items-center justify-center rounded-md">
+          {/* <TouchableOpacity className="bg-[#1D2330] w-11  py-2 items-center justify-center rounded-md">
             <AdjustmentsVerticalIcon color="white" size={30} opacity={1} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
       <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
