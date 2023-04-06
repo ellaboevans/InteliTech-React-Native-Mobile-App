@@ -3,7 +3,15 @@ import React from "react";
 import { StarIcon, MapPinIcon } from "react-native-heroicons/solid";
 import { useNavigation } from "@react-navigation/native";
 
-const PopularCards = ({ title, image, rating, address, price, stock }) => {
+const PopularCards = ({
+  title,
+  image,
+  rating,
+  address,
+  price,
+  stock,
+  description,
+}) => {
   const navigation = useNavigation();
 
   return (
@@ -16,6 +24,7 @@ const PopularCards = ({ title, image, rating, address, price, stock }) => {
           address,
           price,
           stock,
+          description,
         })
       }
     >
