@@ -1,10 +1,24 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { StarIcon, MapPinIcon } from "react-native-heroicons/solid";
+import { useNavigation } from "@react-navigation/native";
 
 const PopularCards = ({ title, image, rating, address, price, stock }) => {
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate("hotelDetails", {
+          title,
+          image,
+          rating,
+          address,
+          price,
+          stock,
+        })
+      }
+    >
       <View className="mx-2 ">
         <View className="p-1 bg-white shadow-md rounded-md">
           <Image
