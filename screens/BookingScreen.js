@@ -5,8 +5,9 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  KeyboardAvoidingView,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import {
@@ -14,9 +15,30 @@ import {
   ArrowLeftIcon,
 } from "react-native-heroicons/outline";
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
+import { TextInput } from "react-native";
 
 const BookingScreen = () => {
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+
   const navigation = useNavigation();
+
+  const handleBooking = () => {
+    console.log(startDate, endDate, fullName, mobileNumber);
+    navigation.navigate("payment", {
+      startDate,
+      endDate,
+      fullName,
+      mobileNumber,
+      title,
+      image,
+      rating,
+      address,
+      price,
+    });
+  };
 
   const {
     params: { title, image, rating, address, price },
@@ -39,7 +61,7 @@ const BookingScreen = () => {
             <EllipsisVerticalIcon size={25} color="#1D2330" />
           </TouchableOpacity>
         </View>
-        <ScrollView className="h-full" showsVerticalScrollIndicator={false}>
+        <ScrollView className="h-full p-2" showsVerticalScrollIndicator={false}>
           <View className="flex-row items-start space-x-2 bg-white shadow-xl rounded-lg mt-6 p-2">
             <Image
               source={{
@@ -65,6 +87,81 @@ const BookingScreen = () => {
               </Text>
             </View>
           </View>
+          <KeyboardAvoidingView className="mt-8">
+            <Text className="font-bold text-[18px] text-[#1D2330] ">Date</Text>
+            <View className="flex-row items-center  justify-around flex-1">
+              <View>
+                <Text className="text-sm w-36 text-gray-400 mt-4 ml-3">
+                  From
+                </Text>
+                <View className="bg-gray-200 py-3 rounded-md">
+                  <TextInput
+                    autoCorrect={false}
+                    autoComplete="off"
+                    placeholder="Start Date"
+                    value={startDate}
+                    onChangeText={(text) => setStartDate(text)}
+                    className="p-1"
+                  />
+                </View>
+              </View>
+              <View>
+                <Text className="text-sm w-36 text-gray-400 mt-4 ml-3">To</Text>
+                <View className="bg-gray-200 py-3 rounded-md">
+                  <TextInput
+                    autoCorrect={false}
+                    autoComplete="off"
+                    placeholder="End Date"
+                    value={endDate}
+                    onChangeText={(text) => setEndDate(text)}
+                    className="p-1"
+                  />
+                </View>
+              </View>
+            </View>
+            <View>
+              <Text className="font-bold text-[18px] my-4 ">
+                Personal Information
+              </Text>
+              <Text className="text-sm w-36 text-gray-400 mb-1 ml-2">
+                Full Name
+              </Text>
+
+              <View className="py-3 bg-gray-200 rounded-md mb-3">
+                <TextInput
+                  autoComplete="off"
+                  autoCorrect={false}
+                  keyboardType="default"
+                  placeholder="Enter your full name"
+                  value={fullName}
+                  onChangeText={(text) => setFullName(text)}
+                  className="p-1"
+                />
+              </View>
+              <Text className="text-sm w-36 text-gray-400 mb-1 ml-2">
+                Mobile Number
+              </Text>
+              <View className="py-3 bg-gray-200 rounded-md">
+                <TextInput
+                  autoComplete="off"
+                  autoCorrect={false}
+                  keyboardType="numeric"
+                  placeholder="Enter your mobile number"
+                  value={mobileNumber}
+                  onChangeText={(text) => setMobileNumber(text)}
+                  className="p-1"
+                />
+              </View>
+              <TouchableOpacity
+                className="bg-[#1D2330] py-3 rounded-md mt-6"
+                onPress={handleBooking}
+              >
+                <Text className="text-white font-bold uppercase text-[18px] text-center p-1 ">
+                  Next
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </KeyboardAvoidingView>
         </ScrollView>
       </View>
     </SafeAreaView>
