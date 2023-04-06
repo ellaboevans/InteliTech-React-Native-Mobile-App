@@ -14,6 +14,7 @@ const ItemCategroy = ({ title }) => {
       address: "Ayeduase, KNUST",
       price: 250.55,
       stock: false,
+      description: `Canam Hall offers you a privileged experience combining comfort and conviviality. Whether you are a backpacker, a solo traveler or with your family, our hotel with top-of-the-range service will meet all your expectations. More than just a hotel, (HN) offers you a place to live and meet people.`,
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ const ItemCategroy = ({ title }) => {
       address: "Cape Coast, Ghana",
       price: 180.98,
       stock: true,
+      description: `The Victory Towers Annex hotel offers a complete experience with common areas that allow you to meet new people in a unique atmosphere. Lounge area, Ping Pong table, table soccer, darts & Boiler room: we told you, it’s not a hotel like the others, it’s a sharing hotel.`,
     },
     {
       id: 3,
@@ -34,6 +36,7 @@ const ItemCategroy = ({ title }) => {
       address: "Winneba, Ghana",
       price: 250.55,
       stock: false,
+      description: `Our Evandy Annex Hotel is in a superb location with friendly and helpful staff. The hostel offers comfortable, clean rooms and fantastic access to most famous sights and attractions.`,
     },
     {
       id: 4,
@@ -44,6 +47,7 @@ const ItemCategroy = ({ title }) => {
       address: "Tamale, Ghana",
       price: 180.98,
       stock: true,
+      description: `St. Theresah's Hotel & Spa is a family-friendly hotel that offers a wide range of accommodation types, from rooms to suites. All this in the peaceful surroundings of our beautiful gardens, will make your time at an unforgettable holiday.`,
     },
     {
       id: 5,
@@ -54,6 +58,7 @@ const ItemCategroy = ({ title }) => {
       address: "Koforidua, Ghana",
       price: 100.51,
       stock: false,
+      description: `Our Wantapa Hotel is in a superb location with friendly and helpful staff. The hostel offers comfortable, clean rooms and fantastic access to most famous sights and attractions.`,
     },
   ]);
 
@@ -79,6 +84,7 @@ const ItemCategroy = ({ title }) => {
               address={item.address}
               price={item.price}
               stock={item.stock}
+              description={item.description}
             />
           ))}
         </View>
