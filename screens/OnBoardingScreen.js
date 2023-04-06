@@ -17,7 +17,7 @@ export default function OnBoardingScreen() {
           easing="ease-in-out"
           className="text-white text-center text-4xl font-bold"
         >
-          InteliTech
+          Noto Room
         </Animatable.Text>
         <Text className="text-sm text-center text-white">
           Let's do this together
