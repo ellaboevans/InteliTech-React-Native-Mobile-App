@@ -41,6 +41,8 @@ const ForgotPasswordScreen = () => {
             placeholder="Enter your email for verification"
             placeholderTextColor={"#bebebe"}
             keyboardType="email-address"
+            autoComplete="off"
+            autoCorrect={false}
             value={email.trim()}
             onChangeText={(text) => setEmail(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"

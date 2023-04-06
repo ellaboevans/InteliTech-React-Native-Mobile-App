@@ -17,15 +17,13 @@ import {
 } from "react-native-heroicons/outline";
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
 
-import { CreditCardInput } from "@rajeshsmallarc/react-native-creditcard";
-
 const PaymentScreen = () => {
-  const [card, setCard] = useState("");
-  //   const [expiryDate, setExpiryDate] = useState("");
-  //   const [cvv, setCvv] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvv, setCvv] = useState("");
 
   const handlePayment = () => {
-    console.log(card);
+    console.log(cardNumber, expiryDate, cvv);
   };
 
   const {
@@ -129,14 +127,10 @@ const PaymentScreen = () => {
                     <CreditCardIcon size={30} color="#1D2330" opacity={0.8} />
                   </TouchableOpacity>
                   <View>
-                    <CreditCardInput
-                      value={card}
-                      onChange={(text) => setCard(text)}
-                    />
-                    {/* <Text className="text-[#8b8b8b] mb-2 mt-2">
+                    <Text className="text-[#8b8b8b] mb-2 mt-2">
                       Card Number
-                    </Text> */}
-                    {/* <View className="py-3 bg-gray-200 rounded-md">
+                    </Text>
+                    <View className="py-3 bg-gray-200 rounded-md">
                       <TextInput
                         placeholder="0000 0000 0000 0000"
                         keyboardType="numeric"
@@ -144,8 +138,8 @@ const PaymentScreen = () => {
                         onChangeText={(text) => setCardNumber(text)}
                         className="p-1"
                       />
-                    </View> */}
-                    {/* <View className="my-5 flex-row items-center justify-around">
+                    </View>
+                    <View className="my-5 flex-row items-center justify-around">
                       <View>
                         <Text className="text-[#8b8b8b] w-40 -ml-1 mb-2">
                           Expire Date
@@ -173,7 +167,7 @@ const PaymentScreen = () => {
                           />
                         </View>
                       </View>
-                    </View> */}
+                    </View>
                     <View className="flex-row items-center justify-between my-9">
                       <View>
                         <Text className="text-[#8b8b8b] text-sm ">Total</Text>

@@ -48,6 +48,8 @@ const LoginScreen = () => {
             placeholder="Enter your email"
             placeholderTextColor={"#bebebe"}
             keyboardType="email-address"
+            autoComplete="off"
+            autoCorrect={false}
             value={email.trim()}
             onChangeText={(text) => setEmail(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
@@ -57,6 +59,7 @@ const LoginScreen = () => {
             placeholder="Enter your password"
             placeholderTextColor={"#bebebe"}
             keyboardType="numbers-and-punctuation"
+            autoComplete="off"
             secureTextEntry
             value={password.trim()}
             onChangeText={(text) => setPassword(text)}

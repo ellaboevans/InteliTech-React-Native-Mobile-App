@@ -54,6 +54,8 @@ const RegisterScreen = () => {
           <TextInput
             placeholder="Enter your email"
             keyboardType="default"
+            autoCorrect={false}
+            autoComplete="off"
             value={email.trim()}
             onChangeText={(text) => setEmail(text)}
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
@@ -61,6 +63,8 @@ const RegisterScreen = () => {
           <TextInput
             placeholder="Enter your password"
             keyboardType="default"
+            autoComplete="off"
+            autoCorrect={false}
             value={password.trim()}
             onChangeText={(text) => setPassword(text)}
             secureTextEntry
@@ -70,6 +74,8 @@ const RegisterScreen = () => {
             placeholder="Confirm your password"
             keyboardType="default"
             value={confirmPassword.trim()}
+            autoComplete="off"
+            autoCorrect={false}
             onChangeText={(text) => setConfirmPassword(text)}
             secureTextEntry
             className="mt-4 bg-[#f2f2f2] py-5 pl-3 rounded-md"
