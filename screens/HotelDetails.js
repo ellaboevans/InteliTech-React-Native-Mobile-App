@@ -28,21 +28,21 @@ const HotelDetails = () => {
           source={{
             uri: image,
           }}
-          className="w-full h-72 p-2 bg-gray-400"
+          className="w-full h-72 p-2 bg-gray-400 "
         />
         <TouchableOpacity
-          className="absolute top-8 left-5 bg-white p-2 rounded-full"
+          className="absolute top-8 left-5 bg-gray-100 p-2 rounded-full"
           onPress={navigation.goBack}
         >
           <ArrowLeftIcon size={20} color="#1D2330" />
         </TouchableOpacity>
       </View>
       <ScrollView
-        className="-mt-4 flex-1 bg-white h-auto rounded-t-[20px] z-10"
+        className="-mt-4 flex-1 bg-white rounded-t-[20px] z-10"
         showsVerticalScrollIndicator={false}
       >
         <View>
-          <View className="p-4">
+          <View className="p-4 mt-auto">
             <Text className="font-bold text-[25px] text-[#1D2330] mt-2">
               {title}
             </Text>
@@ -98,7 +98,13 @@ const HotelDetails = () => {
               <TouchableOpacity
                 className="p-3 bg-[#1D2330] rounded-md"
                 onPress={() =>
-                  alert("Sorry! We're yet to implement this feature")
+                  navigation.navigate("booking", {
+                    title,
+                    image,
+                    rating,
+                    address,
+                    price,
+                  })
                 }
               >
                 <Text className="font-bold text-[18px] uppercase text-white ">
