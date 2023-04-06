@@ -22,24 +22,24 @@ const BookingScreen = () => {
     params: { title, image, rating, address, price },
   } = useRoute();
   return (
-    <ScrollView className="flex-1 bg-white">
-      <SafeAreaView>
-        <View className="p-2 ">
-          <View className="flex-row items-center justify-between py-1 border-b-2 border-gray-100 ">
-            <TouchableOpacity onPress={navigation.goBack}>
-              <ArrowLeftIcon size={25} color="#1D2330" />
-            </TouchableOpacity>
-            <Text className="font-bold text-[20px] capitalize text-center ">
-              Book
-            </Text>
-            <TouchableOpacity
-              onPress={() =>
-                alert("Oops! Sorry, we're yet to implement this feature")
-              }
-            >
-              <EllipsisVerticalIcon size={25} color="#1D2330" />
-            </TouchableOpacity>
-          </View>
+    <SafeAreaView className="bg-white flex-1">
+      <View className="p-2 ">
+        <View className="flex-row items-center justify-between py-1 border-b-2 border-gray-100 ">
+          <TouchableOpacity onPress={navigation.goBack}>
+            <ArrowLeftIcon size={25} color="#1D2330" />
+          </TouchableOpacity>
+          <Text className="font-bold text-[20px] capitalize text-center ">
+            Book
+          </Text>
+          <TouchableOpacity
+            onPress={() =>
+              alert("Oops! Sorry, we're yet to implement this feature")
+            }
+          >
+            <EllipsisVerticalIcon size={25} color="#1D2330" />
+          </TouchableOpacity>
+        </View>
+        <ScrollView className="h-full" showsVerticalScrollIndicator={false}>
           <View className="flex-row items-start space-x-2 bg-white shadow-xl rounded-lg mt-6 p-2">
             <Image
               source={{
@@ -48,7 +48,10 @@ const BookingScreen = () => {
               className="w-28 h-28 p-2 rounded-lg bg-gray-400 "
             />
             <View className="mt-2 pl-2">
-              <Text className="font-bold text-[18px] "> {title} </Text>
+              <Text className="font-bold text-[18px] text-[#1D2330]  ">
+                {" "}
+                {title}{" "}
+              </Text>
               <View className="flex-row items-center space-x-1 py-1">
                 <MapPinIcon size={20} color="#1D2330" opacity={0.5} />
                 <Text className="text-[#8b8b8b]">{address}</Text>
@@ -63,9 +66,9 @@ const BookingScreen = () => {
               </Text>
             </View>
           </View>
-        </View>
-      </SafeAreaView>
-    </ScrollView>
+        </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 };
 
