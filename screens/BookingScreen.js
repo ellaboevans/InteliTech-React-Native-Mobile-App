@@ -30,8 +30,6 @@ const BookingScreen = () => {
     navigation.navigate("payment", {
       startDate,
       endDate,
-      fullName,
-      mobileNumber,
       title,
       image,
       rating,
