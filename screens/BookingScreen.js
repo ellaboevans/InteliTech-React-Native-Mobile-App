@@ -49,8 +49,7 @@ const BookingScreen = () => {
             />
             <View className="mt-2 pl-2">
               <Text className="font-bold text-[18px] text-[#1D2330]  ">
-                {" "}
-                {title}{" "}
+                {title}
               </Text>
               <View className="flex-row items-center space-x-1 py-1">
                 <MapPinIcon size={20} color="#1D2330" opacity={0.5} />
