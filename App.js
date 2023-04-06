@@ -5,6 +5,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import OnBoardingScreen from "./screens/OnBoardingScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
+import HotelDetails from "./screens/HotelDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
             headerShown: false,
           }}
         />
+
         <Stack.Screen
           name="login"
           component={LoginScreen}
@@ -41,6 +43,13 @@ export default function App() {
         <Stack.Screen
           name="register"
           component={RegisterScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="hotelDetails"
+          component={HotelDetails}
           options={{
             headerShown: false,
           }}
