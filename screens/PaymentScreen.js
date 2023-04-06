@@ -8,7 +8,7 @@ import {
   SafeAreaView,
   TextInput,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import {
   EllipsisVerticalIcon,
@@ -17,19 +17,19 @@ import {
 } from "react-native-heroicons/outline";
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
 
+import { CreditCardInput } from "@rajeshsmallarc/react-native-creditcard";
+
 const PaymentScreen = () => {
+  const [card, setCard] = useState("");
+  //   const [expiryDate, setExpiryDate] = useState("");
+  //   const [cvv, setCvv] = useState("");
+
+  const handlePayment = () => {
+    console.log(card);
+  };
+
   const {
-    params: {
-      startDate,
-      endDate,
-      fullName,
-      mobileNumber,
-      title,
-      image,
-      rating,
-      address,
-      price,
-    },
+    params: { startDate, endDate, title, image, rating, address, price },
   } = useRoute();
 
   const navigation = useNavigation();
@@ -129,17 +129,23 @@ const PaymentScreen = () => {
                     <CreditCardIcon size={30} color="#1D2330" opacity={0.8} />
                   </TouchableOpacity>
                   <View>
-                    <Text className="text-[#8b8b8b] mb-2 mt-2">
+                    <CreditCardInput
+                      value={card}
+                      onChange={(text) => setCard(text)}
+                    />
+                    {/* <Text className="text-[#8b8b8b] mb-2 mt-2">
                       Card Number
-                    </Text>
-                    <View className="py-3 bg-gray-200 rounded-md">
+                    </Text> */}
+                    {/* <View className="py-3 bg-gray-200 rounded-md">
                       <TextInput
                         placeholder="0000 0000 0000 0000"
                         keyboardType="numeric"
+                        value={cardNumber}
+                        onChangeText={(text) => setCardNumber(text)}
                         className="p-1"
                       />
-                    </View>
-                    <View className="my-5 flex-row items-center justify-around">
+                    </View> */}
+                    {/* <View className="my-5 flex-row items-center justify-around">
                       <View>
                         <Text className="text-[#8b8b8b] w-40 -ml-1 mb-2">
                           Expire Date
@@ -148,6 +154,8 @@ const PaymentScreen = () => {
                           <TextInput
                             placeholder="MM/YY"
                             keyboardType="default"
+                            value={expiryDate}
+                            onChangeText={(text) => setExpiryDate(text)}
                             className="p-1 "
                           />
                         </View>
@@ -159,11 +167,13 @@ const PaymentScreen = () => {
                             placeholder="****"
                             secureTextEntry
                             keyboardType="numeric"
+                            value={cvv}
+                            onChangeText={(text) => setCvv(text)}
                             className="p-1"
                           />
                         </View>
                       </View>
-                    </View>
+                    </View> */}
                     <View className="flex-row items-center justify-between my-9">
                       <View>
                         <Text className="text-[#8b8b8b] text-sm ">Total</Text>
@@ -173,11 +183,7 @@ const PaymentScreen = () => {
                       </View>
                       <TouchableOpacity
                         className="py-4 bg-[#1D2330] rounded-md"
-                        onPress={() =>
-                          alert(
-                            "We're yet to implement this feature. Thank you."
-                          )
-                        }
+                        onPress={handlePayment}
                       >
                         <Text className="uppercase font-bold text-center text-white text-[20px] w-44 ">
                           Pay
