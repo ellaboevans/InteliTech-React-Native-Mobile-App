@@ -47,7 +47,7 @@ const ItemCategroy = ({ title }) => {
       address: "Tamale, Ghana",
       price: 180.98,
       stock: true,
-      description: `St. Theresah's Hotel & Spa is a family-friendly hotel that offers a wide range of accommodation types, from rooms to suites. All this in the peaceful surroundings of our beautiful gardens, will make your time at an unforgettable holiday.`,
+      description: `St. Theresah's Hotel & Spa is a family-friendly hotel that offers a wide range of accommodation types, from rooms to suites. All this in the peaceful surroundings of our beautiful gardens, will make your time an unforgettable one.`,
     },
     {
       id: 5,
