@@ -31,12 +31,8 @@ const PaymentScreen = () => {
     setCardNumber(formattedValue);
   };
 
-  const handlePayment = (value) => {
-    console.log({
-      "Credit Card Number": cardNumber,
-      "Expire Date": expiryDate,
-      "Security Key ": cvv,
-    });
+  const handlePayment = () => {
+    alert("Oops! Sorry, we're yet to Route this feature");
     setCardNumber("");
     setExpiryDate("");
     setCvv("");
