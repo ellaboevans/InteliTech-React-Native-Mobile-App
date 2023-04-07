@@ -38,6 +38,10 @@ const RegisterScreen = () => {
           console.log("Registered with:", user.email);
         })
         .catch((error) => alert(error.message));
+
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
     }
   };
 

@@ -34,6 +34,9 @@ const LoginScreen = () => {
         console.log("Logged in with:", user.email);
       })
       .catch((error) => alert(error.message));
+
+    setEmail("");
+    setPassword("");
   };
 
   return (

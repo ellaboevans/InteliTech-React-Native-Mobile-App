@@ -26,6 +26,8 @@ const ForgotPasswordScreen = () => {
         navigation.replace("login");
       })
       .catch((error) => alert(error.message));
+
+    setEmail("");
   };
 
   return (

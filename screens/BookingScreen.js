@@ -36,6 +36,11 @@ const BookingScreen = () => {
       address,
       price,
     });
+
+    setStartDate("");
+    setEndDate("");
+    setFullName("");
+    setMobileNumber("");
   };
 
   const {
