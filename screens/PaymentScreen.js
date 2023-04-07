@@ -22,8 +22,24 @@ const PaymentScreen = () => {
   const [expiryDate, setExpiryDate] = useState("");
   const [cvv, setCvv] = useState("");
 
-  const handlePayment = () => {
-    console.log(cardNumber, expiryDate, cvv);
+  const handleCreditCardNumberChange = (value) => {
+    // Remove all non-digit characters
+    const sanitizedValue = value.replace(/\D/g, "");
+    // Add space every 4 characters
+    const formattedValue = sanitizedValue.replace(/(\d{4})/g, "$1 ");
+
+    setCardNumber(formattedValue);
+  };
+
+  const handlePayment = (value) => {
+    console.log({
+      "Credit Card Number": cardNumber,
+      "Expire Date": expiryDate,
+      "Security Key ": cvv,
+    });
+    setCardNumber("");
+    setExpiryDate("");
+    setCvv("");
   };
 
   const {
@@ -135,7 +151,7 @@ const PaymentScreen = () => {
                         placeholder="0000 0000 0000 0000"
                         keyboardType="numeric"
                         value={cardNumber}
-                        onChangeText={(text) => setCardNumber(text)}
+                        onChangeText={handleCreditCardNumberChange}
                         className="p-1"
                       />
                     </View>
